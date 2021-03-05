@@ -1,3 +1,9 @@
+from random import randint
+from time import time
+import matplotlib.pyplot as plt
+from tqdm import tqdm
+
+
 def insertion_sort(A):
     for j in range(1, len(A)):
         key = A[j]
@@ -12,7 +18,10 @@ def insertion_sort(A):
 def main():
     lst = [3, 6, 2, 8, 1, 10, 4, 5]
     print(insertion_sort(lst))
-    assert insertion_sort(lst) == sorted(lst)
+    # assert selection_sort(lst) == sorted(lst)
+
+
+
 
 
 if __name__ == '__main__':
