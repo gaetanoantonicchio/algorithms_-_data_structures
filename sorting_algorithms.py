@@ -10,9 +10,9 @@ def insertion_sort(A):
 
 
 def main():
-    list = [3, 6, 2, 8, 1, 10, 4, 5]
-    print(insertion_sort(list))
-    assert insertion_sort(list) == sorted(list)
+    lst = [3, 6, 2, 8, 1, 10, 4, 5]
+    print(insertion_sort(lst))
+    assert insertion_sort(lst) == sorted(lst)
 
 
 if __name__ == '__main__':
