@@ -1,2 +1,3 @@
 # algorithms_&_data_structures
-Theory and exercises of the course in Algorithms &amp; Data Structure  @University of Pisa
+Theory, exercises of the course in Algorithms &amp; Data Structure  @University of Pisa
+Algorithms are developed from scratch and tested in term of time complexity
