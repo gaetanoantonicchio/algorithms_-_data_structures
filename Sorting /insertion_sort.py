@@ -1,61 +1,16 @@
-from random import randint
 from time import time
 import matplotlib.pyplot as plt
-from tqdm import tqdm
 
 
-def insertion_sort(A):
+def insertion_sort(A=[]):
     for j in range(1, len(A)):
         key = A[j]
         i = j - 1
-        while i > 0 and A[i] > key:
+        while i >= 0 and A[i] > key:
             A[i + 1] = A[i]
             i = i - 1
         A[i + 1] = key
     return A
-
-
-def RandomLists(num_lst=5, init_size=10, size_increment=5):
-    """
-    Generates lists of random numbers
-
-    :param num_lst: number of lists to generate
-    :param init_size: initial size of array
-    :param size_increment: number by which array is incremented at each step
-    :return: random lists
-    """
-    random_lists = []
-    # generating random lists
-    for one_list in range(num_lst):
-        random_lists.append([])
-        for i in range(1, init_size):
-            random_lists[one_list].append(randint(1, 1000))
-        init_size += size_increment
-    return random_lists
-
-
-def SortedLists(num_lst=5, init_size=10, size_increment=5, reverse=False):
-    """
-    Generates sorted lists
-
-    :param num_lst: number of lists to generate
-    :param init_size: initial size of array
-    :param size_increment: umber by which array is incremented at each step
-    :param reverse: if True generate a list sorted in reverse order
-    :return: sorted lists
-    """
-    sorted_lists = []
-    # generating sorted lists
-    for one_list in range(num_lst):
-        sorted_lists.append([])
-        if not reverse:
-            for num in range(1, init_size):
-                sorted_lists[one_list].append(num)
-        else:
-            for num in range(init_size, 1, -1):
-                sorted_lists[one_list].append(num)
-        init_size += size_increment
-    return sorted_lists
 
 
 def test_IS(sort_lists, rev_sort_lists, random_lists):
