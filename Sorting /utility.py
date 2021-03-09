@@ -119,7 +119,7 @@ def compare_IS_SS(arrays, case):
 
 
 def main():
-    unsorted_lists = RandomLists(num_lst=70, init_size=100, size_increment=100)
+    unsorted_lists = RandomLists(num_lst=40, init_size=100, size_increment=100)
     print(compare_IS_SS(unsorted_lists, case='avg'))
 
 
