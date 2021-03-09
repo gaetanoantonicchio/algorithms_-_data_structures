@@ -1,6 +1,10 @@
 from time import time
 import matplotlib.pyplot as plt
 
+########################
+#    INSERTION SORT    #
+########################
+
 
 def insertion_sort(A=[]):
     for j in range(1, len(A)):
@@ -12,6 +16,9 @@ def insertion_sort(A=[]):
         A[i + 1] = key
     return A
 
+########################################
+#   INSERTION SORT - COMPLEXITY TEST   #
+########################################
 
 def test_IS(sort_lists, rev_sort_lists, random_lists):
     x_bestcase = []
