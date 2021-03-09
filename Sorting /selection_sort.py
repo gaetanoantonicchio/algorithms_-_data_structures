@@ -1,5 +1,8 @@
 from utility import *
 
+########################
+#    SELECTION SORT    #
+########################
 
 def selection_sort(A=[]):
     for j in range(len(A)):
