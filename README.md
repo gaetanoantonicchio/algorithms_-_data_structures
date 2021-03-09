@@ -1,4 +1,7 @@
 # Algorithms & Data Structures
+<img width=150px src="https://www.plan4res.eu/wp-content/uploads/2018/02/University-of-Pisa-Italy.png" />
+
+
 ### Theory and exercises of the course in Algorithms &amp; Data Structure  @University of Pisa<br>
 ### Algorithms are developed from scratch and tested in term of time complexity.
 -------------------------------------------------------------------------------
