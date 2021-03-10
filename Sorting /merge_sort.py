@@ -47,23 +47,23 @@ def merge_1(A, left, right):
     :param right: right half of the array A
     :return: A sorted
     """
-    left_pointer, right_pointer, array_pointer = 0, 0, 0
+    left_pointer, right_pointer, A_pointer = 0, 0, 0
 
     while left_pointer < len(left) and right_pointer < len(right):
         if left[left_pointer] <= right[right_pointer]:
-            A[array_pointer] = left[left_pointer]
+            A[A_pointer] = left[left_pointer]
             left_pointer += 1
-            array_pointer += 1
+            A_pointer += 1
 
         else:
-            A[array_pointer] = right[right_pointer]
+            A[A_pointer] = right[right_pointer]
             right_pointer += 1
-            array_pointer += 1
+            A_pointer += 1
 
     if left_pointer == len(left):
-        A[array_pointer:] = right[right_pointer:]
+        A[A_pointer:] = right[right_pointer:]
     else:
-        A[array_pointer:] = left[left_pointer:]
+        A[A_pointer:] = left[left_pointer:]
     return A
 
 
