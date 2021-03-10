@@ -10,10 +10,16 @@ def merge_sort(A):
     # split arrays recursively - divide step
     left, right = merge_sort(A[:midpoint]), merge_sort(A[midpoint:])
 
-    return merge(left, right)  # merge step
+    return merge_1(A, left, right)  # merge step
 
 
-def merge(left, right):
+def merge_0(left, right):
+    """
+    Implementation of merge that outputs the result in a new list
+    :param left: left half of the array A
+    :param right: right half of the array A
+    :return: "sorted_list"
+    """
     sorted_list = []
     left_pointer, right_pointer = 0, 0
 
@@ -31,6 +37,34 @@ def merge(left, right):
     sorted_list.extend(right[right_pointer:])
 
     return sorted_list
+
+
+def merge_1(A, left, right):
+    """
+    Returns a sorted list by overwriting the original unsorted list A
+    :param A: original unsorted list
+    :param left: left half of the array A
+    :param right: right half of the array A
+    :return: A sorted
+    """
+    left_pointer, right_pointer, array_pointer = 0, 0, 0
+
+    while left_pointer < len(left) and right_pointer < len(right):
+        if left[left_pointer] <= right[right_pointer]:
+            A[array_pointer] = left[left_pointer]
+            left_pointer += 1
+            array_pointer += 1
+
+        else:
+            A[array_pointer] = right[right_pointer]
+            right_pointer += 1
+            array_pointer += 1
+
+    if left_pointer == len(left):
+        A[array_pointer:] = right[right_pointer:]
+    else:
+        A[array_pointer:] = left[left_pointer:]
+    return A
 
 
 def main():
